@@ -18,7 +18,7 @@ Crafty.c('GameStarter', {
   },
 
   _start: function() {
-    Crafty.scene('Level1');
+    Crafty.scene('NeverEnding');
     this.unbind('Clap', this._start).destroy();
   }
 });
