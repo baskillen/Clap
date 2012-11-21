@@ -30,15 +30,23 @@ Crafty.scene('Level1',
       platform: [0, 0, 200, 16]
     });
 
+    Crafty.sprite('assets/images/house.png', {
+      houses: [0, 0, 391, 389]
+    });
+
     for (var i in _platformPositions) {
       var pos = _platformPositions[i];
-      Crafty.e('Platform').attr({x: pos[0], y: pos[1]});
+      Crafty.e('Platform')
+          .attr({x: pos[0], y: pos[1]})
+          .speed(3);
     }
+
+    Crafty.e('Houses').speed(2);
 
     var _player = Crafty.e('SpriteAnimation', 'Player')
       .animate('PlayerRunning', 0, 0, 7) //setup animation
       .animate('PlayerRunning', 25, -1) // start animation;
-      .attr({x: 100, y: 576, w: 70, h: 124})
+      .attr({x: 100, y: 576, w: 70, h: 124, z: 200})
       .bind('playerDied', function() {
         Crafty.scene('gameOver');
         _background.unload().destroy();
