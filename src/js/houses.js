@@ -4,7 +4,7 @@ Crafty.c('Houses', {
   init: function() {
     this.requires('Foreground')
         .spriteName('houses')
-        .attr({x: Crafty.viewport.width, y: 384, z: 5});
+        .attr({x: Crafty.viewport.width, y: 584 - this.h, z: 5});
   },
 
   random: function() {
