@@ -18,7 +18,7 @@ Crafty.c('GameStarter', {
   },
 
   _start: function() {
-    Crafty.scene('NeverEnding');
+    Crafty.scene('EllisStart');
     this.unbind('Clap', this._start).destroy();
   }
 });

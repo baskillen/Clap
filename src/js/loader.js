@@ -11,7 +11,7 @@ Crafty.scene('loader',
 
     Crafty.load([
       'assets/images/box.png',
-      'assets/images/man.png',
+      'assets/images/ellis-front.png',
       'assets/images/house.png',
       'assets/images/start-screen.png',
       'assets/sounds/jump.mp3',

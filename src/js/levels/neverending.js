@@ -41,10 +41,8 @@ Crafty.scene('NeverEnding',
 
     Crafty.e('Houses').speed(2);
 
-    var _player = Crafty.e('SpriteAnimation', 'Player')
-      .animate('PlayerRunning', 0, 0, 7) //setup animation
-      .animate('PlayerRunning', 25, -1) // start animation;
-      .attr({x: 100, y: 576, w: 70, h: 124, z: 200})
+    var _player = Crafty.e('SpriteAnimation', 'EllisFront')
+      .attr({x: 100, y: 376, w: 97, h: 200, z: 200})
       .bind('playerDied', function() {
         Crafty.scene('gameOver');
         _background.unload().destroy();
