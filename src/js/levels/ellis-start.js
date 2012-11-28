@@ -12,8 +12,8 @@ Crafty.scene('EllisStart',
     });
 
     _player = Crafty.e('EllisFront')
-      .attr({x: 200, y: 300, w: 97, h: 200, z: 200})
-      .scale(0.5, 1, 500)
+      .attr({x: 0, y: 0, w: 72, h: 150, z: 200})
+      .scale(0.4, 1, 370, 370, 500)
       .bind('playerDied', function() {
         Crafty.scene('gameOver');
         _background.unload().destroy();

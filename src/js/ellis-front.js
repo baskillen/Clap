@@ -9,15 +9,15 @@ Crafty.c('EllisFront', {
         .animate('PlayerRunning', 40, -1);
   },
 
-  scale: function(from, to, frames) {
+  scale: function(scaleFrom, scaleTo, targetX, targetY, frames) {
     this.bind('EnterFrame', function(frame) {
       if (!this._startFrame) {
         this._startFrame = frame.frame;
-        this._interval = (to - from) / frames;
+        this._interval = (scaleTo - scaleFrom) / frames;
       }
       if (frame.frame <= this._startFrame + frames) {
-        var _scale = this._interval * (frame.frame - this._startFrame) + from;
-        this.css('transform', 'scale(' + _scale + ', ' + _scale + ') translate(200px, 300px)')
+        var _scale = this._interval * (frame.frame - this._startFrame) + scaleFrom;
+        this.css('transform', 'scale(' + _scale + ', ' + _scale + ') translate(' + targetX + 'px, ' + targetY + 'px)')
             .css('-webkit-transform', 'scale(' + _scale + ', ' + _scale + ') translate(200px, 300px)')
         console.log(this.x);
       }
@@ -27,7 +27,7 @@ Crafty.c('EllisFront', {
   },
 
   _setup: function() {
-    Crafty.sprite(97, 200, 'assets/images/ellis-front.png', {
+    Crafty.sprite(72, 150, 'assets/images/ellis-front.png', {
       ellisFront: [0, 0]
     });
 
